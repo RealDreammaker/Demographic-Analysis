@@ -23,6 +23,12 @@
   cursor: pointer;
 }
 
+.circles {
+  position: absolute;
+  opacity: 0.8;
+  z-index: -1;
+}
+
 /* font size dependent on radius, see app.js */
 .stateText {
   font-family: sans-serif;
@@ -50,6 +56,7 @@
   text-transform: capitalize;
   background: rgba(0, 0, 0, 0.8);
   border-radius: 4px;
+  transition: fill 0.9s ease-out;
 }
 
 /* Mobile Rules */

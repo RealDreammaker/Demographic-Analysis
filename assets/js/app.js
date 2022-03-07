@@ -6,6 +6,7 @@ function makeResponsive() {
     // delare constants
     const marginForLabel = 80;
     const animateDudation = 1000;
+    const circleRadius = 14;
 
     // clear existing svg area if there was one
     var svgArea = d3.select("svg");
@@ -154,7 +155,7 @@ function makeResponsive() {
     };
     
     // functions for updating TOOLTIPS
-    function updatingTooltips(circlesGroup, textGroup, chosenXLabel,chosenYLabel){
+    function updatingTooltips(circlesGroup, temCircle, textGroup, chosenXLabel,chosenYLabel){
 
         // depending on type of data to show, there could be percentage sign to show
         var percentageLabels = ["poverty","healthcare","obesity","smokes"]
@@ -179,13 +180,35 @@ function makeResponsive() {
         
         circlesGroup.on("mouseover", function(d) {
             toolTip.show(d, this);
+            // show temporary circle
+            temCircle
+                .attr("cx",d3.select(this).attr("cx"))
+                .attr("cy",d3.select(this).attr("cy"))
+                .attr("stroke","blue")
+                .attr("stroke-width",2)
         })
-        circlesGroup.on("mouseout", function(d) {toolTip.hide(d);})
+        circlesGroup.on("mouseout", function(d) {
+            toolTip.hide(d);
+            // hide temporary circle
+            temCircle
+            .attr("stroke","none")
+        })
 
         textGroup.on("mouseover", function(d) {
             toolTip.show(d, this);
+            // show temporary circle
+            temCircle
+            .attr("cx",d3.select(this).attr("x"))
+            .attr("cy",d3.select(this).attr("y"))
+            .attr("stroke","blue")
+            .attr("stroke-width",2)
         })
-        textGroup.on("mouseout", function(d) {toolTip.hide(d);})
+        textGroup.on("mouseout", function(d) {
+            toolTip.hide(d);
+            // hide temporary circle
+            temCircle
+            .attr("stroke","none")
+        })
 
     return circlesGroup, textGroup;
     };
@@ -230,7 +253,8 @@ function makeResponsive() {
             .data(data)
             .enter()
             .append("circle")
-                .attr("r", 14)
+                .attr("class", "circles")
+                .attr("r", circleRadius)
                 .attr("fill","#34568B")
                 .attr("opacity", 0.9)
 
@@ -253,9 +277,14 @@ function makeResponsive() {
         // update annotation of abreviated state name to each circle
         textGroup = annotateUpdate(textGroup,xScale, yScale, chosenXLabel,chosenYLabel);
 
-
+        // add temporary circle for tooltip, intially set it to invisible
+        var temCircle = chartGroup.append("circle")
+                                    .attr("stroke","none")
+                                    .attr("fill", "none")
+                                    .attr("r", circleRadius);
+        
         // intialize tooltips
-        updatingTooltips(circlesGroup, textGroup, chosenXLabel,chosenYLabel)
+        updatingTooltips(circlesGroup, temCircle, textGroup, chosenXLabel,chosenYLabel)
 
 
         // add labels for all axis
@@ -318,7 +347,7 @@ function makeResponsive() {
                 textGroup = annotateUpdate(textGroup,xScale, yScale, chosenXLabel,chosenYLabel);
                 
                 // update tooltips
-                updatingTooltips(circlesGroup, textGroup, chosenXLabel,chosenYLabel)
+                updatingTooltips(circlesGroup, temCircle, textGroup, chosenXLabel,chosenYLabel)
             };
         });
 
