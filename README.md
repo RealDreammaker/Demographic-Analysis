@@ -11,7 +11,7 @@ The goal of this assignment is to creating charts, graphs, and interactive eleme
 - - -
 I deployed a [webpage](https://realdreammaker.github.io/D3-challenge/) to show a scatter plot between two of the data variables such as `Healthcare vs. Poverty` or `Smokers vs. Age`.
 
-* The a scatter plot represents each state with circle elements:        
+* The scatter plot represents each state with circle elements.
     
 * Include state abbreviations in the circles.
 
