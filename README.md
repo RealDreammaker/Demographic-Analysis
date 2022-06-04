@@ -28,7 +28,8 @@ The goal of this assignment is to creating charts, graphs, and interactive eleme
 
 * I added tooltips to the circles and display each tooltip with the data that the user has selected. I used the `d3-tip.js` plugin developed by [Justin Palmer](https://github.com/Caged).
 
-
+## Development
+For details of coding, refer to [javascript](assets/js/app.js)
 
 
 
