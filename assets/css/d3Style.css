@@ -25,7 +25,6 @@
 
 .circles {
   position: absolute;
-  opacity: 0.8;
   z-index: -1;
 }
 

@@ -9,13 +9,16 @@ The goal of this assignment is to creating charts, graphs, and interactive eleme
 <br>
 ## Tasks completed
 - - -
-I deployed a [webpage](https://realdreammaker.github.io/D3-challenge/) to show a scatter plot between two of the data variables such as `Healthcare vs. Poverty` or `Smokers vs. Age`.
 
-* The a scatter plot represents each state with circle elements:        
+![](Images\D3.gif)
+
+* I deployed a [webpage](https://realdreammaker.github.io/Demographic-Analysis/) to show a scatter plot between two of the data variables such as `Healthcare vs. Poverty` or `Smokers vs. Age`.
+
+* The a scatter plot represents each state with circle elements      
     
-* Include state abbreviations in the circles.
+* State abbreviations were included in the circles.
 
-* Included gridlines to the plot
+* The plot has responsive gridlines.  
 
 * Create and situate axes and labels to the left and bottom of the chart.
 
