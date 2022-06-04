@@ -10,7 +10,7 @@ The goal of this assignment is to creating charts, graphs, and interactive eleme
 ## Completed Tasks 
 - - -
 
-![](Images\D3.gif)
+![](Images/D3.gif)
 
 * I deployed a [webpage](https://realdreammaker.github.io/Demographic-Analysis/) to show a scatter plot between two of the data variables such as `Healthcare vs. Poverty` or `Smokers vs. Age`.
 
