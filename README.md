@@ -1,5 +1,7 @@
 # Demographic Analysis 
 
+![](Images/D3.gif)
+
 ## Background
 - - -
 The goal of this assignment is to creating charts, graphs, and interactive elements to help readers understand the findings.
@@ -9,8 +11,6 @@ The goal of this assignment is to creating charts, graphs, and interactive eleme
 <br>
 ## Completed Tasks 
 - - -
-
-![](Images/D3.gif)
 
 * I deployed a [webpage](https://realdreammaker.github.io/Demographic-Analysis/) to show a scatter plot between two of the data variables such as `Healthcare vs. Poverty` or `Smokers vs. Age`.
 
