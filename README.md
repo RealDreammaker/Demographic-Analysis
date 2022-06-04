@@ -7,7 +7,7 @@ The goal of this assignment is to creating charts, graphs, and interactive eleme
 [The data set](assets/data/data.csv) for this assignment is based on 2014 ACS 1-year estimates which includes data on rates of income, obesity, poverty, etc. by state.
 <br>
 <br>
-## Tasks completed
+## Completed Tasks 
 - - -
 
 ![](Images\D3.gif)
